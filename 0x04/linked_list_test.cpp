@@ -6,11 +6,19 @@ int dat[MX], pre[MX], nxt[MX];
 int unused = 1;
 
 void insert(int addr, int num){
+  dat[unused] = num; // 새 노드의 값
+  pre[unused] = addr; // 새 노드 <- 이전 노드
+  nxt[unused] = nxt[addr]; // 새 노드 -> 다음 노드
 
+  // 기존 노드들의 연결 정보 수정
+  if (nxt[addr] != -1) pre[nxt[addr]] = unused;
+  nxt[addr] = unused;
+  unused++;
 }
 
 void erase(int addr){
-
+  nxt[pre[addr]] = nxt[addr];
+  if (nxt[addr] != -1) pre[nxt[addr]] = pre[addr];
 }
 
 void traverse(){
