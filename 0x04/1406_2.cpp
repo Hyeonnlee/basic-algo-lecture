@@ -1,4 +1,5 @@
 // http://boj.kr/5c97cb6a88324537a722e8de9169e2ab
+// 연결 리스트 풀이
 #include <bits/stdc++.h>
 using namespace std;
 
