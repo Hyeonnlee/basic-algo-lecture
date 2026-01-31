@@ -14,8 +14,8 @@ int main(void) {
   cout << '<';
   while (!Q.empty()) {
     for (int i = 0; i < k - 1; i++) {
-      Q.push(Q.front());
-      Q.pop();
+      Q.push(Q.front());  // 맨 앞사람 추가
+      Q.pop();  // 맨 앞사람 제거
     }
     cout << Q.front();
     Q.pop();
