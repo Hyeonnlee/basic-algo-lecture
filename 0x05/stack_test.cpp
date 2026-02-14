@@ -14,7 +14,7 @@ void pop(){
 }
 
 int top(){
-  return dat[pos];
+  return dat[pos - 1];
 }
 
 void test(){
